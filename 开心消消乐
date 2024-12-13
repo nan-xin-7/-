@@ -1,0 +1,251 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <time.h>
+#include <stdlib.h>
+#include <iostream>
+#include <random>
+
+#define length 8
+
+//生成随机数
+int getRand() {
+	std::random_device rd;  // 真随机数生成器
+	std::mt19937 gen(rd()); // Mersenne Twister 引擎
+	std::uniform_int_distribution<> dis(1, 6);  // 生成 0 到 3 之间的整数
+	int random_number = dis(gen);
+    return random_number;
+}
+
+//数组初始化（建立初始地图）
+void InitArray(int a[8][8])
+{
+    for (int i = 0; i < length; i++) 
+    {
+        for (int j = 0; j < length; j++)
+        {
+            a[i][j] = getRand();
+        }
+    }
+}
+
+void PrintArray(int a[8][8])
+{
+    for (int i = 0; i < length; i++)
+    {
+        for (int j = 0; j < length; j++)
+        {
+            printf("%d ", a[i][j]);
+        }
+        printf("\n");
+    }
+
+}
+
+//交换宝石操作
+void Swap(int a[8][8], int x1, int y1, int x2, int y2)
+{
+    int temp;
+    temp = a[x1][y1];
+    a[x1][y1] = a[x2][y2];
+    a[x2][y2] = temp;
+}
+
+//初始地图无可消函数
+void Init(int a[8][8], int x, int y, int b[1])
+{
+	int temp = a[x][y];
+	int i = x;
+	int j = y;
+	//纵向判断
+	if (i + 1 < length && a[i][y] == a[i + 1][y])
+	{
+		if (i + 2 < length && a[i + 1][y] == a[i + 2][y] )
+		{
+			a[i][y] = getRand();
+			a[i + 1][y] = getRand();
+			a[i + 2][y] = getRand();
+            b[0] = 1;
+			if ( i + 3 < length && a[i + 3][y] == temp )
+			{
+				a[i + 3][y] = getRand();
+				if (i + 4 < length && a[i + 4][y] == temp)
+				{
+					a[i + 4][y] = getRand();
+				}
+			}
+		}
+	}
+    //横向判断
+    if (j + 1 < length && a[x][j+1] == temp)
+    {
+        if (j + 2 < length && a[x][j + 2] == temp)
+        {
+            a[x][j + 1] = getRand();
+            a[x][j + 2] = getRand();
+            b[0] = 1;
+            if (j + 3 < length && a[x][j + 3] == temp)
+            {
+                a[x][j + 3] = getRand();
+                if (j + 4 < length && a[x][j + 4] == temp)
+                    a[x][j + 4] = getRand();
+            }
+        }
+    }
+
+}
+
+void Test(int a[8][8])
+{
+    int b[1] = { 0 };
+    for (int i = 0; i < length; i++)
+    {
+        for (int j = 0; j < length; j++)
+        {
+            Init(a, i, j, b);
+        }
+    }
+    if (b[0])
+        Test(a);
+    else
+        PrintArray(a);
+
+}
+
+//下落函数
+void Fallen(int a[8][8], int y)
+{
+    int i,j;
+    bool test = true;
+    //记录0值的上方位置
+    for (j = 7; j >= 0; j--)
+    {
+        if (a[j][y] == 0)
+        {
+            test = false;
+            break;
+        }
+    }
+    if (!test)
+        return;
+
+    //记录0值的最低部
+    for (i = 0; i < length; i++)
+    {
+        if (a[i][y] == 0)
+        {
+            i--;
+            break;
+        }
+    }
+    //下落，0值上移，下落之后用随机数补全
+    for (j; j >= 0; j--)
+    {
+        if (i >= 0)
+        {
+            a[j][y] = a[i][y];
+            a[i][y] = 0;
+            i--;
+        }
+        else
+        {
+            a[j][y] = getRand();
+        }
+    }
+
+}
+
+void Eli(int a[8][8], int x, int y)
+{
+    int temp = a[x][y];
+    int i = x;
+    int j = y;
+    //纵向判断
+    if (i + 1 < length && a[i][y] == a[i + 1][y])
+    {
+        if (i + 2 < length && a[i + 1][y] == a[i + 2][y])
+        {
+            a[x][y] = 0;
+            a[i + 1][y] = 0;
+            a[i + 2][y] = 0;
+            if (i + 3 < length && a[i + 3][y] == temp)
+            {
+                a[i + 3][y] = 0;
+                if (i + 4 < length && a[i + 4][y] == temp)
+                {
+                    a[i + 4][y] = 0;
+                }
+            }
+        }
+    }
+    //横向判断
+    if (j + 1 < length && a[x][j + 1] == temp)
+    {
+        if (j + 2 < length && a[x][j + 2] == temp)
+        {
+            a[x][j + 1] = 0;
+            a[x][j + 2] = 0;
+            if (j + 3 < length && a[x][j + 3] == temp)
+            {
+                a[x][j + 3] = 0;
+                if (j + 4 < length && a[x][j + 4] == temp)
+                    a[x][j + 4] = 0;
+            }
+        }
+    }
+}
+
+void Eliminate(int a[8][8])
+{
+    bool flag = true;
+    for (int i = 0; i < length; i++)
+    {
+        for (int j = 0; j < length; j++)
+        {
+            if (a[i][j] == 0)
+            {
+                flag = false;
+                continue;
+            }
+            Eli(a, i, j);
+        }
+    }
+
+    if (!flag)
+    {
+        for (int i = 0; i < length; i++)
+            Fallen(a, i);
+        Eliminate(a);
+    }
+}
+
+
+int main()
+{
+    int a[8][8];
+    InitArray(a);
+    PrintArray(a);
+    printf("\n");
+    Test(a);
+    int x1 = 0, y1 = 0, x2 = 0, y2 = 0;
+    while (1)
+    {
+        printf("\n");
+        while (1)
+        {
+            scanf("%d %d", &x1, &y1);
+            scanf("%d %d", &x2, &y2);
+            if (abs(x2 - x1) + abs(y2 - y1) == 1)
+            {
+                Swap(a, x1, y1, x2, y2);
+                Eliminate(a);
+                PrintArray(a);
+            }
+            else
+                printf("无法交换");
+        }
+    }
+
+
+
+
+}
