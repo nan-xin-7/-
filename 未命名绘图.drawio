@@ -1,9 +1,133 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0" version="27.0.6">
   <diagram name="第 1 页" id="4XoeHnQjTwN6iC710VaO">
-    <mxGraphModel>
+    <mxGraphModel dx="1565" dy="747" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-1" value="应急响应子系统" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-5" y="48" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="271" y="239.5" as="targetPoint" />
+            <mxPoint x="56" y="239.5" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-33" value="发现应急事件" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="f55XARpK2ZytY_y-L_Sn-32">
+          <mxGeometry x="-0.0162" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-2" value="铁路安全管理员" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="200" width="135" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="f55XARpK2ZytY_y-L_Sn-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="50" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-63" value="生成事件反馈" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="f55XARpK2ZytY_y-L_Sn-60">
+          <mxGeometry x="0.0112" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-3" value="应急救援单位" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="540" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-64" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="f55XARpK2ZytY_y-L_Sn-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="670" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-68" value="更新应急数据" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="f55XARpK2ZytY_y-L_Sn-64">
+          <mxGeometry x="0.0062" y="-3" relative="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-4" value="数据管理与分析子系统" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="380" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-73" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="f55XARpK2ZytY_y-L_Sn-11" target="f55XARpK2ZytY_y-L_Sn-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-74" value="发送应急事件信息" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="f55XARpK2ZytY_y-L_Sn-73">
+          <mxGeometry x="-0.142" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-11" value="3.1" style="swimlane;html=1;startSize=20;fontStyle=0;collapsible=0;horizontal=1;swimlaneLine=1;strokeWidth=2;swimlaneFillColor=#ffffff;rounded=1;direction=east;whiteSpace=wrap;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="271" y="190" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-23" value="应急事件报告" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="f55XARpK2ZytY_y-L_Sn-11">
+          <mxGeometry x="50" y="45" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="f55XARpK2ZytY_y-L_Sn-26" target="f55XARpK2ZytY_y-L_Sn-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-45" value="传递应急资源调度信息" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="f55XARpK2ZytY_y-L_Sn-44">
+          <mxGeometry y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-26" value="3.2" style="swimlane;html=1;startSize=20;fontStyle=0;collapsible=0;horizontal=1;swimlaneLine=1;strokeWidth=2;swimlaneFillColor=#ffffff;rounded=1;direction=east;whiteSpace=wrap;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="271" y="530" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-27" value="应急资源调度信息" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="f55XARpK2ZytY_y-L_Sn-26">
+          <mxGeometry x="50" y="45" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-55" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="280" y="400" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-53" value="" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];" vertex="1" parent="f55XARpK2ZytY_y-L_Sn-55">
+          <mxGeometry width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-54" value="应急事件记录" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="f55XARpK2ZytY_y-L_Sn-55">
+          <mxGeometry x="20" y="5" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-58" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="f55XARpK2ZytY_y-L_Sn-53" target="f55XARpK2ZytY_y-L_Sn-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-59" value="传递应急事件数据" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="f55XARpK2ZytY_y-L_Sn-58">
+          <mxGeometry x="-0.0876" y="-4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="f55XARpK2ZytY_y-L_Sn-61">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-72" value="更新应急事件" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="f55XARpK2ZytY_y-L_Sn-71">
+          <mxGeometry x="-0.0651" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-61" value="3.3" style="swimlane;html=1;startSize=20;fontStyle=0;collapsible=0;horizontal=1;swimlaneLine=1;strokeWidth=2;swimlaneFillColor=#ffffff;rounded=1;direction=east;whiteSpace=wrap;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="370" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-62" value="事件处理反馈" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="f55XARpK2ZytY_y-L_Sn-61">
+          <mxGeometry x="50" y="45" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-65" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="590" y="560" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-66" value="" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];" vertex="1" parent="f55XARpK2ZytY_y-L_Sn-65">
+          <mxGeometry width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-67" value="应急数据分析" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="f55XARpK2ZytY_y-L_Sn-65">
+          <mxGeometry x="20" y="5" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="f55XARpK2ZytY_y-L_Sn-66" target="f55XARpK2ZytY_y-L_Sn-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-70" value="资源调度指令" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="f55XARpK2ZytY_y-L_Sn-69">
+          <mxGeometry x="0.042" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f55XARpK2ZytY_y-L_Sn-75" value="应急响应子系统" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="-154" y="127" width="137" height="32" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
